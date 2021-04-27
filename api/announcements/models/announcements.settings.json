@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcements",
+  "info": {
+    "name": "Announcements",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "message": {
+      "type": "richtext",
+      "required": false
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "postdate": {
+      "type": "datetime"
+    },
+    "Resources": {
+      "type": "component",
+      "repeatable": true,
+      "component": "resources.resources"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "announcements",
+      "dominant": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "views": {
+      "via": "announcement",
+      "collection": "views"
+    }
+  }
+}

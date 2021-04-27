@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_resources_resources",
+  "info": {
+    "name": "Resources",
+    "icon": "dice-d6",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "resourcename": {
+      "type": "string"
+    },
+    "resourceurl": {
+      "type": "string"
+    }
+  }
+}

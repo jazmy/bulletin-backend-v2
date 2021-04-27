@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "views",
+  "info": {
+    "name": "Views",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "announcement": {
+      "model": "announcements",
+      "via": "views"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "views"
+    }
+  }
+}

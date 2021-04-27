@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "name": "Subscriptions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "includedtags": {
+      "collection": "tags"
+    },
+    "excludedtags": {
+      "collection": "tags"
+    },
+    "includeusers": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "excludedusers": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "digest": {
+      "type": "enumeration",
+      "enum": [
+        "immediately",
+        "daily",
+        "weekly",
+        "monthly"
+      ]
+    }
+  }
+}

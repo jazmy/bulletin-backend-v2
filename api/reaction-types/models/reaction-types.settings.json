@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reaction_types",
+  "info": {
+    "name": "ReactionTypes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "imageicon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
